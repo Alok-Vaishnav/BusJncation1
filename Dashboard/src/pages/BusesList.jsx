@@ -19,7 +19,7 @@ export default function BusesList({ currentUser, onLogout }) {
     try {
       setLoading(true);
       setError('');
-      const response = await fetch('http://localhost:5000/api/buses');
+      const response = await fetch('https://busjncation1.onrender.com/api/buses');
       const result = await response.json();
       
       if (result.success) {
@@ -29,7 +29,7 @@ export default function BusesList({ currentUser, onLogout }) {
       }
     } catch (err) {
       console.error('Error fetching buses:', err);
-      setError('❌ Cannot connect to backend. Make sure server is running on http://localhost:5000');
+      setError('❌ Cannot connect to backend. Make sure server is running on https://busjncation1.onrender.com');
     } finally {
       setLoading(false);
     }
@@ -42,7 +42,7 @@ export default function BusesList({ currentUser, onLogout }) {
 
   const confirmDelete = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/buses/${deleteModal.busId}`, {
+      const response = await fetch(`https://busjncation1.onrender.com/api/buses/${deleteModal.busId}`, {
         method: 'DELETE',
       });
 
@@ -70,7 +70,7 @@ export default function BusesList({ currentUser, onLogout }) {
       console.log('Selling bus:', bus._id);
       
       // Mark bus as sold (don't delete, just mark status)
-      const response = await fetch(`http://localhost:5000/api/buses/${bus._id}`, {
+      const response = await fetch(`https://busjncation1.onrender.com/api/buses/${bus._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
