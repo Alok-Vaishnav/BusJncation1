@@ -70,7 +70,7 @@ export default function BusesList({ currentUser, onLogout }) {
       console.log('Selling bus:', bus._id);
       
       // Mark bus as sold (don't delete, just mark status)
-      const response = await fetch(`https://busjncation1.onrender.com/api/buses/${bus._id}`, {
+      const response = await fetch(` https://busjncation1.onrender.com/api/buses/${bus._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

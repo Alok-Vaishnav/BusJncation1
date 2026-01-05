@@ -131,7 +131,7 @@ export default function BusForm() {
       let errorMessage = 'Error: ';
       
       if (error.message === 'Failed to fetch') {
-        errorMessage = '❌ Cannot connect to backend server. Make sure:\n1. Backend is running on https://busjncation1.onrender.com\n2. Start backend with: npm start\n3. Check if port 5000 is in use';
+        errorMessage = '❌ Cannot connect to backend server. Make sure:\n1. Backend is running on  https://busjncation1.onrender.com\n2. Start backend with: npm start\n3. Check if port 5000 is in use';
       } else {
         errorMessage += error.message;
       }

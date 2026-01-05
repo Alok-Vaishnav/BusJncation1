@@ -18,7 +18,7 @@ export default function Dashboard({ currentUser, onLogout }) {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const response = await fetch('https://busjncation1.onrender.com/api/buses/stats');
+        const response = await fetch(' https://busjncation1.onrender.com/api/buses/stats');
         const result = await response.json();
         
         if (result.success) {
